@@ -14,7 +14,7 @@ const Lista = () => {
 
   const pokemones = [
     {nombre:'bolbasaur', numero:'001', color:'#74cb48', imagen:bulbasaur},
-    {nombre:'charmander', numero:'004', color:'F57d31', imagen:charmander},
+    {nombre:'charmander', numero:'004', color:'#F57d31', imagen:charmander},
     {nombre:'squirtle', numero:'007', color:'#6493EB', imagen:squirtle},
     {nombre:'butterfree', numero:'012', color:'#a7b723', imagen:butterfree},
     {nombre:'pikachu', numero:'025', color:'#f9cf30', imagen:pikachu},
@@ -25,15 +25,16 @@ const Lista = () => {
   ]
 
   return (
-    <div className='grid grid-cols-3 grid-rows-3 gap-2'>
+    <div className='grid grid-cols-3 gap-2 justify-items-center'>
         {pokemones.map((pokemon) => (
-        <div className='flex flex-col border-solid rounded-xl border-2'>
-          <p className='text-right'>#{pokemon.numero}</p>
-          <div className='w-[80px] h-[80px] flex items-center justify-center'>
+        <div className='bg-white flex flex-col border-solid items-center w-[120px] h-[120px] rounded-xl border-[1px]'style={{borderColor:pokemon.color}}>
+          <p className='text-xs ml-auto pr-[5px]' style={{color:pokemon.color}}>#{pokemon.numero}</p>
+          <div className='w-[80px] h-[80px] flex justify-center items-center'>
             <img className='w-[80px] m-[5px]' src={pokemon.imagen}></img>
           </div>
-
-          <p className='text-center text-sm'>{pokemon.nombre}</p>
+          <div className='w-full h-full static rounded-b-lg' style={{backgroundColor:pokemon.color}}>
+            <p className='text-center text-sm text-white'>{pokemon.nombre}</p>
+          </div>
         </div>
           ))}
     </div>

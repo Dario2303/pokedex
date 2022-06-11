@@ -7,7 +7,7 @@ import './principal.css';
 
 const Principal = () => {
   return (
-    <div className='principal'>
+    <div className='principal border-[#c2c2c2]'>
       <div className='mx-[10px] pt-[25px]'>
         <Header/>
         <Buscador/>
