@@ -27,12 +27,13 @@ const Lista = () => {
   return (
     <div className='grid grid-cols-3 grid-rows-3 gap-2'>
         {pokemones.map((pokemon) => (
-        <div className='flex flex-col'>  
+        <div className='flex flex-col border-solid rounded-xl border-2'>
           <p className='text-right'>#{pokemon.numero}</p>
           <div className='w-[80px] h-[80px] flex items-center justify-center'>
             <img className='w-[80px] m-[5px]' src={pokemon.imagen}></img>
           </div>
-          <p className='text-center'>{pokemon.nombre}</p>
+
+          <p className='text-center text-sm'>{pokemon.nombre}</p>
         </div>
           ))}
     </div>
