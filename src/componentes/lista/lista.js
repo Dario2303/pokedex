@@ -8,7 +8,7 @@ import gastly from '../../imagenes/gastly.png';
 import ditto from '../../imagenes/ditto.png';
 import mew from '../../imagenes/mew.png';
 import aron from '../../imagenes/aron.png';
-
+import MapeoLista from './mapeoLista/mapeoLista';
 
 const Lista = () => {
 
@@ -24,22 +24,21 @@ const Lista = () => {
     {nombre:'mew', numero:'304', color:'#b7b9d0', imagen:aron},
   ]
 
+    const MostrarLista = () => {
+        return(
+          pokemones.map((pokemon) => 
+          <MapeoLista
+            nombre={pokemon.nombre}
+            numero={pokemon.numero}
+            color={pokemon.color}
+            imagen={pokemon.imagen}
+          />
+        ))}
+
   return (
     <div className='grid grid-cols-3 gap-2 justify-items-center'>
-        {pokemones.map((pokemon) => (
-        <div className='bg-white flex flex-col border-solid items-center w-[120px] h-[120px] rounded-xl border-[1px]'style={{borderColor:pokemon.color}}>
-          <p className='text-xs ml-auto pr-[5px]' style={{color:pokemon.color}}>#{pokemon.numero}</p>
-          <div className='w-[80px] h-[80px] flex justify-center items-center'>
-            <img className='w-[80px] m-[5px]' src={pokemon.imagen}></img>
-          </div>
-          <div className='w-full h-full static rounded-b-lg' style={{backgroundColor:pokemon.color}}>
-            <p className='text-center text-sm text-white'>{pokemon.nombre}</p>
-          </div>
-        </div>
-          ))}
+        {MostrarLista()}
     </div>
   )
-
 }
-
 export default Lista
