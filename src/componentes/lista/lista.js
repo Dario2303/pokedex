@@ -17,6 +17,7 @@ import MapeoLista from './mapeoLista/mapeoLista';
     
       useEffect(() => {
         llamarApi();
+        
         }, [])
 
       const llamarApi = () => {
@@ -24,7 +25,7 @@ import MapeoLista from './mapeoLista/mapeoLista';
         .then (res => res.json())
         .then ((llamado) => {
           setPokemones(llamado)
-          console.log(pokemones)
+          console.log(llamado.id)
           }
         )
         .catch ((error) => {
@@ -47,12 +48,12 @@ import MapeoLista from './mapeoLista/mapeoLista';
 //   ]
     const MostrarLista = () => {
         return(
+          
           pokemones.map((pokemon) => 
           <MapeoLista
             nombre={pokemon.name}
             numero={pokemon.id}
             imagen={pokemon.image}
-            tipo={pokemon.types[0].type}
             pokemon={pokemon}
           />
           )

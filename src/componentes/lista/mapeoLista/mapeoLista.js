@@ -19,7 +19,6 @@ const MapeoLista = (props) => {
           />
           <Nombre
               nombre={props.pokemon.name}
-              tipo={props.pokemon.types[0].type}
               pokemon={props.pokemon}
           />
       </div>

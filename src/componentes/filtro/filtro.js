@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Filtro = () => {
+const Filtro = (props) => {
   return (
     <div>
-      
+
     </div>
   )
 }
