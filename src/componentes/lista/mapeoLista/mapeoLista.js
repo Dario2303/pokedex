@@ -9,17 +9,18 @@ const MapeoLista = (props) => {
   return (
     
     <Link to='/pokemon'>
-      <div className='bg-white flex flex-col border-solid items-center w-[120px] h-[120px] rounded-xl border-[1px]' style={{borderColor:props.color}}>
+      <div className='bg-white flex flex-col border-solid items-center w-[120px] 
+      h-[120px] rounded-xl border-[1px]' style={{borderColor:props.color}}>
           <Numero
-              numero={props.numero}
-              color={props.color}
+              numero={props.pokemon.id}
           />
           <Imagen
-              imagen={props.imagen}
+              imagen={props.pokemon.image}
           />
           <Nombre
-              nombre={props.nombre}
-              color={props.color}
+              nombre={props.pokemon.name}
+              tipo={props.pokemon.types[0].type}
+              pokemon={props.pokemon}
           />
       </div>
     </Link>   
