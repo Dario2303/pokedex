@@ -11,28 +11,9 @@ import React, { useEffect, useState } from 'react'
 import MapeoLista from './mapeoLista/mapeoLista';
 
    
-  const ApiPokemon = () => {
+  const ApiPokemon = (props) => {
     
-    const [pokemones, setPokemones] = useState([]);
     
-      useEffect(() => {
-        llamarApi();
-        
-        }, [])
-
-      const llamarApi = () => {
-        fetch ('https://us-central1-senpai-9b555.cloudfunctions.net/getFullList')
-        .then (res => res.json())
-        .then ((llamado) => {
-          setPokemones(llamado)
-          console.log(llamado.id)
-          }
-        )
-        .catch ((error) => {
-          console.log(error)
-        })
-      }
-
 // const Lista = () => {
 
 //   const pokemones = [
@@ -49,7 +30,7 @@ import MapeoLista from './mapeoLista/mapeoLista';
     const MostrarLista = () => {
         return(
           
-          pokemones.map((pokemon) => 
+          props.pokemones.map((pokemon) => 
           <MapeoLista
             nombre={pokemon.name}
             numero={pokemon.id}
