@@ -18,7 +18,7 @@ const Principal = () => {
     }, [])
 
     useEffect(() => {
-      const texto = pokemones.filter((pokemon) => {
+      const texto = pokemonesOriginales.filter((pokemon) => {
         return pokemon.name === busqueda;
       })
       setPokemones(texto)
