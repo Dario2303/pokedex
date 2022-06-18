@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 const Numero = (props) => {
+  console.log(props.numero)
+
   return (
     <>
-      <p className='text-xs ml-auto pr-[5px]' style={{color:props.color}}>#{props.numero}</p>
+      <p className='text-xs ml-auto pr-[5px]'>#{props.numero}</p>
     </>
   )
 }

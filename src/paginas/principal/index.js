@@ -5,6 +5,7 @@ import './principal.css';
 import { useState, useEffect } from 'react';
 
 
+
 const Principal = () => {
 
   const [busqueda, setBusqueda] = useState('')
@@ -22,7 +23,6 @@ const Principal = () => {
     .then ((llamado) => {
       setPokemones(llamado)
       setPokemonesOriginales(llamado)
-      console.log(llamado.id)
       }
     )
     .catch ((error) => {
@@ -36,8 +36,8 @@ const Principal = () => {
         <Header/>
         <Buscador setBusqueda={setBusqueda}/>
         <Lista pokemones={pokemones.filter((pokemon) => pokemon.name.match(busqueda))}/>
-
       </div>
+      
     </div>
   )
 }
