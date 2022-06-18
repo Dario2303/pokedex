@@ -8,8 +8,6 @@ import { useState, useEffect } from 'react';
 const Principal = () => {
 
   const [busqueda, setBusqueda] = useState('')
-  console.log(busqueda)
-
   const [pokemones, setPokemones] = useState([]);
   const [pokemonesOriginales, setPokemonesOriginales] = useState([]);    
 
@@ -17,15 +15,7 @@ const Principal = () => {
     llamarApi();
     }, [])
 
-    useEffect(() => {
-      const texto = pokemonesOriginales.filter((pokemon) => {
-        return pokemon.name === busqueda;
-      })
-      setPokemones(texto)
-
-      }, [busqueda])
-
-
+    
   const llamarApi = () => {
     fetch ('https://us-central1-senpai-9b555.cloudfunctions.net/getFullList')
     .then (res => res.json())
@@ -45,7 +35,8 @@ const Principal = () => {
       <div className='mx-[10px] pt-[25px]'>
         <Header/>
         <Buscador setBusqueda={setBusqueda}/>
-        <Lista pokemones={pokemones}/>
+        <Lista pokemones={pokemones.filter((pokemon) => pokemon.name.match(busqueda))}/>
+
       </div>
     </div>
   )

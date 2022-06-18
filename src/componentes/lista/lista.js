@@ -1,17 +1,7 @@
-import React, { useEffect, useState } from 'react'
-// import bulbasaur from '../../imagenes/bulbasaur.png';
-// import charmander from '../../imagenes/charmander.png';
-// import squirtle from '../../imagenes/squirtle.png';
-// import butterfree from '../../imagenes/butterfree.png';
-// import pikachu from '../../imagenes/pikachu.png';
-// import gastly from '../../imagenes/gastly.png';
-// import ditto from '../../imagenes/ditto.png';
-// import mew from '../../imagenes/mew.png';
-// import aron from '../../imagenes/aron.png';
 import MapeoLista from './mapeoLista/mapeoLista';
 
    
-  const ApiPokemon = (props) => {
+  const Lista = (props) => {
     
     
 // const Lista = () => {
@@ -48,4 +38,4 @@ import MapeoLista from './mapeoLista/mapeoLista';
     </div>
   )
 }
-export default ApiPokemon;
+export default Lista;

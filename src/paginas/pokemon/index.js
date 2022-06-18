@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import '../pokemon/pokemon.css'
-import aron from '../../imagenes/aron.png'
 import HeaderTarjeta from '../../componentes/headertarjeta/HeaderTarjeta'
 import { useParams } from 'react-router-dom'
+import pokeball from '../../imagenes/Pokeball.png'
+import '../../componentes/colorPorEstilo/colorPorEstilo.css'
 
 const Pokemon = () => {
 
@@ -28,17 +29,21 @@ const Pokemon = () => {
     })
   }
 
+
   return (
   <>
-    <div className='absolute ml-[100px] mt-[120px]'>
-      <img src={detallePokemon.image}></img>
+    <img src={pokeball} alt='pokeball_tarjeta' className='absolute fill-white opacity-10 ml-[200px] mt-[20px]'/>
+    
+    <div className='absolute w-[230px] h-[230px] ml-[110px] mt-[120px]'>
+      <img src={detallePokemon.image} alt="img_pokemon"></img>
     </div>
+    
 
-    <div className='pokemon border-[#c2c2c2] bg-blue-500 flex flex-col p-[5px]'>
-    <HeaderTarjeta/>
+    <div className={`${detallePokemon.types && detallePokemon.types[0].type.name} pokemon border-[#c2c2c2] flex flex-col p-[5px]`}>
+    <HeaderTarjeta name={detallePokemon?.name} id={detallePokemon?.id}/>
         <div className='w-auto h-[450px] bg-white rounded-lg mt-auto'>
           {/* <BotonesTarjeta/> */}
-          <h1></h1>
+          <h1>About</h1>
           <div>
             {/* <Data/> */}
           </div>
@@ -47,5 +52,6 @@ const Pokemon = () => {
   </>
   )
 }
+
 
 export default Pokemon;

@@ -11,7 +11,7 @@ const MapeoLista = (props) => {
 
     <Link to={`/pokemon/${props.pokemon.id}`}>
       <div className='bg-white flex flex-col border-solid items-center w-[120px] 
-      h-[120px] rounded-xl border-[1px]'>
+      h-[120px] rounded-xl border-[1px] ${props.pokemon.type}'>
           <Numero
               numero={props.pokemon.id}
           />
