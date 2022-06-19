@@ -1,3 +1,4 @@
+/*color de fonco*/
 .rock{
     background-color: #b69e31;
 }
@@ -51,4 +52,60 @@
 }
 .dragon{
     background-color: #7037ff;
+}
+
+/* color en texto*/
+.rockf{
+    color: #b69e31;
+}
+.ghostf{
+    color: #70559b;
+}
+.steelf{
+    color: #b7b9d0;
+}
+.waterf{
+    color: #6493eb;
+}
+.grassf{
+    color: #74cb4b;
+}
+.psychicf{
+    color: #fb5584;
+}
+.icef{
+    color: #9ad6df;
+}
+.darkf{
+    color: #75574c;
+}
+.fairyf{
+    color: #e69eac;
+}
+.normalf{
+    color: #aaa67d;
+}
+.fightingf{
+    color: #c12239;
+}
+.flyingf{
+    color: #ab91ec;
+}
+.poisonf{
+    color: #a43e9e;
+}
+.groundf{
+    color: #dec16b;
+}
+.bugf{
+    color: #a7b723;
+}
+.firef{
+    color: #f57d31;
+}
+.electricf{
+    color: #f9cf30;
+}
+.dragonf{
+    color: #7037ff;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Numero = (props) => {
-  console.log(props.numero)
 
   return (
     <>

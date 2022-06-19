@@ -12,6 +12,7 @@ const Principal = () => {
   const [pokemones, setPokemones] = useState([]);
   const [pokemonesOriginales, setPokemonesOriginales] = useState([]);    
 
+    console.log(pokemonesOriginales)
   useEffect(() => {
     llamarApi();
     }, [])

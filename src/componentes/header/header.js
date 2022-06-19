@@ -1,7 +1,7 @@
 import React from 'react'
 import pokeball from '../../imagenes/Pokeball.png';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className='flex items-center'>
       <img className='w-[30px]' src={pokeball}/>
