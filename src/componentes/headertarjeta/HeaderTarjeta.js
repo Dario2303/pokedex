@@ -13,7 +13,7 @@ const HeaderTarjeta = (props) => {
           <h1 className='text-3xl text-white'>{props.name}</h1>
           <h1 className='ml-auto text-xg px-5 text-white'>#{props.id}</h1>
       </div>
-      <Link to='/'>
+      <Link to={`/pokemon/${props.id+1}`}>
             <i className='absolute mt-[120px] ml-[380px] text-2xl fa-solid fa-angle-right text-white'></i>
         </Link>
     </>

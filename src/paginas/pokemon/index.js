@@ -16,6 +16,12 @@ const Pokemon = () => {
     llamarPokemon();
     }, [])
 
+
+    useEffect(() => {
+      llamarPokemon();
+      }, [id])
+
+      
   const llamarPokemon = () => {
     fetch (`https://us-central1-senpai-9b555.cloudfunctions.net/getPokemon?id=${id}`)
     .then (res => res.json())
@@ -28,6 +34,10 @@ const Pokemon = () => {
     })
   }
 
+  //   const siguiente = () => {
+      
+  //   }
+  // console.log(detallePokemon)
   return (
   <>
     <img src={pokeball} alt='pokeball_tarjeta' className='absolute opacity-10 ml-[200px] mt-[20px]'/>
@@ -44,7 +54,8 @@ const Pokemon = () => {
           <h1 className={`mt-[10px] font-bold text-xl ${detallePokemon.types && detallePokemon.types[0].type.name}f`}>About</h1>
           <div>
             <Data color={`mt-[10px] font-bold text-xl text-center ${detallePokemon.types && detallePokemon.types[0].type.name}f`}
-            colorBase={`${detallePokemon.types && detallePokemon.types[0].type.name}f`}/>
+            colorBase={`${detallePokemon.types && detallePokemon.types[0].type.name}f`}
+            colorBar={`${detallePokemon.types && detallePokemon.types[0].type.name}`}/>
         </div>
       </div>
     </div>

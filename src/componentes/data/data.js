@@ -9,7 +9,8 @@ const Data = (props) => {
         <AboutDetalle/>
         <AboutDescripcion/>
         <h1 className={props.color}>Base Stats</h1>
-        <Atributos colorBase={props.colorBase}/>
+        <Atributos colorBase={props.colorBase} 
+                    colorBar={props.colorBar}/>
     </div>
   )
 }

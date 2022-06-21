@@ -31,6 +31,12 @@ const Principal = () => {
     })
   }
 
+
+  // .sort((a,b) => b.id-a.id)
+  // .sort((a, b) => a.name.localeCompare(b.name))
+
+
+
   return (
     <div className='principal border-[#c2c2c2]'>
       <div className='mx-[10px] pt-[25px]'>
