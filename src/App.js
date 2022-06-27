@@ -5,7 +5,8 @@ import {
   Route,
 } from 'react-router-dom';
 import Principal from './paginas/principal';
-import Pokemon from './paginas/pokemon';
+import Detail from './paginas/pokemon';
+import Error404 from './paginas/error/error';
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
         />
         <Route
           path='/pokemon/:id'
-          element={<Pokemon/>}
+          element={<Detail/>}
+        />
+        <Route
+          path='/pokemon'
+          element={<Error404/>}
         />
       </Routes>
     </BrowserRouter>

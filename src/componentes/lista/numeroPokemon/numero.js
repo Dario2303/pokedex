@@ -1,10 +1,11 @@
 import React from 'react';
+import '../../colorPorEstilo/colorPorEstilo.css';
 
 const Numero = (props) => {
 
   return (
     <>
-      <p className='text-xs ml-auto pr-[5px]'>#{props.numero}</p>
+      <p className={`${props.type}f text-xs ml-auto pr-[5px]`}>#{props.numero}</p>
     </>
   )
 }

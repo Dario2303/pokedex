@@ -7,7 +7,7 @@ import '../../componentes/colorPorEstilo/colorPorEstilo.css'
 import BotonesTarjeta from '../../componentes/botonestarjeta/botonesTarjeta'
 import Data from '../../componentes/data/data'
 
-const Pokemon = () => {
+const Detail = () => {
 
   const [detallePokemon, setDetallePokemon] = useState([]);
     const {id}= useParams ()
@@ -34,10 +34,6 @@ const Pokemon = () => {
     })
   }
 
-  //   const siguiente = () => {
-      
-  //   }
-  // console.log(detallePokemon)
   return (
   <>
     <img src={pokeball} alt='pokeball_tarjeta' className='absolute opacity-10 ml-[200px] mt-[20px]'/>
@@ -64,4 +60,4 @@ const Pokemon = () => {
 }
 
 
-export default Pokemon;
+export default Detail;

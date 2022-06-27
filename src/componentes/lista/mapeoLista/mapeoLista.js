@@ -4,26 +4,27 @@ import Nombre from '../nombre/nombre';
 import Imagen from '../imagen/imagen';
 import { Link } from 'react-router-dom';
 
-const MapeoLista = (props) => {
+const Card = (props) => {
 
   return (
 
-    <Link to={`/pokemon/${props.pokemon.id}`}>
-      <div className='bg-[#ffffff] flex flex-col border-solid items-center w-[120px] 
+    <Link to={`/pokemon/${props.data?.id}`}>
+      <div className='bg-[#ffffff] flex flex-col border-solid items-center m-[3px] w-[120px] 
       h-[120px] rounded-xl border-[1px]'>
           <Numero
-              numero={props.pokemon.id}
+              numero={props.data?.id}
+              type={props.data?.types[0].type?.name}
           />
           <Imagen
-              imagen={props.pokemon.image}
+              imagen={props.data?.id}
           />
           <Nombre
-              nombre={props.pokemon.name}
-              pokemon={props.pokemon}
+              nombre={props.data?.name}
+              type={props.data?.types[0].type?.name}
           />
       </div>
     </Link>   
   )
 }
 
-export default MapeoLista;
+export default Card;
